@@ -1,0 +1,220 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Space+Grotesk&display=swap');
+
+/* GENERAL STYLES */
+
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #F7F5F0;
+    color: #222222;
+}
+
+h1, h2, h3 {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    color: #172554;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HEADER AND NAVIGATION */
+
+header {
+    background-color: #F7F5F0;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #172554;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #315BFF;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #172554;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* HERO SECTION */
+
+.hero {
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 50px;
+    max-width: 750px;
+}
+
+.hero h1 span {
+    color: #315BFF;
+}
+
+.hero-description {
+    max-width: 600px;
+    font-size: 18px;
+}
+
+.eyebrow {
+    color: #2445B8;
+    font-weight: bold;
+}
+
+.button {
+    display: inline-block;
+    background-color: #172554;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.button:hover {
+    background-color: #315BFF;
+}
+
+/* INTRODUCTION */
+
+.introduction {
+    background-color: white;
+    padding: 60px 0;
+}
+
+.introduction h2 {
+    font-size: 36px;
+}
+
+.introduction p {
+    max-width: 700px;
+}
+
+/* EXPLORE SECTION */
+
+.explore {
+    padding: 60px 0;
+}
+
+.explore h2 {
+    font-size: 36px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.explore-card {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #dddddd;
+}
+
+.explore-card h3 {
+    font-size: 25px;
+}
+
+.explore-card a {
+    color: #315BFF;
+}
+
+/* CLOSING SECTION */
+
+.closing {
+    background-color: #C8FA6B;
+    padding: 60px 0;
+}
+
+.closing h2 {
+    font-size: 36px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #172554;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* BASIC ACCESSIBILITY */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+a:focus-visible {
+    outline: 3px solid #315BFF;
+    outline-offset: 3px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (min-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
